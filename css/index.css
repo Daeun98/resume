@@ -23,6 +23,8 @@ body {color:#a9a9a9; background-color:#1e1e1e;
 #header .nav ul li:hover span {display:inline-block;
     color:#ce8349; font-weight: bold;}
 #header .nav ul li.on {color:#569cd6;}
+#header .nav ul li.on span {display:inline-block;
+    color:#ce8349; font-weight: bold;}
 
 /* section */
 .article1 .slide-group {position:relative;}
