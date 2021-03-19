@@ -1,9 +1,8 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Imbue&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
 .row {max-width:1200px; margin:0 auto; padding:0 10px;}
-body {color:#a9a9a9; background-color:#1e1e1e;
+body {color:#ddd; background-color:#1e1e1e;
     font-family: 'IBM Plex Mono', monospace;}
 
 /* header */
@@ -11,20 +10,18 @@ body {color:#a9a9a9; background-color:#1e1e1e;
     z-index:999999; width:100%; width:37px; height: 100%;}
 #header .nav {background:#3c3c3c; position:fixed; top:0;
     z-index:999999; width:100%; box-shadow:0px 0px 5px rgba(0,0,0,0.7);}
-#header .nav ul li {float:left; margin-left: 37px;}
-#header .nav ul li a {
+#header .nav .depth1 li {float:left; margin-left: 37px;}
+#header .nav .depth1 li a {
     display:inline-block; 
     padding:10px 40px 10px 30px; font-size:17px;
 }
-#header .nav ul li:hover a {font-weight: bold;
-    background:#1e1e1e;
+#header .nav .depth1 li.on a {font-weight: bold;
+    background:#1e1e1e; color:#569cd6;
 }
-#header .nav ul li span {display:none;}
-#header .nav ul li:hover span {display:inline-block;
+#header .nav .depth1 li span {display:none;}
+#header .nav .depth1 li.on span {display:inline-block;
     color:#ce8349; font-weight: bold;}
-#header .nav ul li.on {color:#569cd6;}
-#header .nav ul li.on span {display:inline-block;
-    color:#ce8349; font-weight: bold;}
+
 
 /* section */
 .article1 .slide-group {position:relative;}
@@ -133,8 +130,8 @@ body {color:#a9a9a9; background-color:#1e1e1e;
 } */
 
 /* about me art2구역 */
-.article2 {height:100vh; border-bottom:1px solid #a9a9a9;
-    padding-top:37px; margin-left:37px; position: relative;}
+.article2 {height:100vh;
+    padding-top:37px; position: relative;}
 .article2::before {content:''; position: absolute; top:0; left:30%;
     width:500px; animation:lineani 1s both;
     border-left:1px solid #555; transform:skew(-40deg);
@@ -148,152 +145,92 @@ body {color:#a9a9a9; background-color:#1e1e1e;
     0% {opacity:0; height:0%;}
     100% {opacity:1; height:100%;}
 }
-.article2 img {position: absolute; top:50%; left:10%; transform:translateY(-50%); height:500px;}
-.article2 > div {position:relative; height:100vh; }
-.article2 .pbox {position:absolute; top:49%; left:48%;}
-.article2 h3 {font-size:70px; color: #d7ba7d;
-    margin-bottom:10px; margin-left:-30px;}
-.article2 p {font-size:30px; line-height:1.5;}
-.article2 p span {color:#9cdcfe;}
-.article2 p:nth-of-type(1) {margin-left:-35px;}
+.article2 .leftbox {float:left; width:50%;}
+.article2 .rightbox {float:left; width:50%;}
+.article2 .leftbox .contant1 {transform:translateY(130px);}
+.article2 .leftbox .contant1 > p {font-size:20px; margin:80px 0 100px 30px;
+    line-height: 1.5; font-family: 'Noto Sans KR',sans-serif;}
+.article2 .leftbox strong {font-size: 25px; color: #fff;
+    font-weight:bold; margin-left:50px;}
+.article2 .leftbox .contant1 > p > strong:nth-of-type(2) {margin-left:270px;}
+.article2 .leftbox h3 {font-size:80px; color: #d7ba7d;
+    font-family: 'Heebo', sans-serif;}
+.article2 .leftbox .pbox > p {font-size:20px; line-height:1.5;}
+.article2 .leftbox .pbox > p span {color:#9cdcfe;}
+.article2 .leftbox .line {width:500px; height:100%; border:1px solid #a9a9a9; transform:skew(-40deg);}
 
-.article2 .line {width:500px; height:100%; border:1px solid #a9a9a9; transform:skew(-40deg);}
-
-/* portfolio art3구역 */
-.article3 {padding-top:50px; margin-left:37px; height:100vh;
-    border-bottom:1px solid #a9a9a9; position:relative;}
-.article3 .imgbox {font-family: 'Imbue', serif; margin-top:50px;}
-.article3 .colum {float:left; width:33.3333%; height:800px;}
-.article3 .colum > div {height:400px;}
-.article3 .colum .colum2 {height:200px;}
-.article3 .colum .colum2 > div {float:left; width:50%; height:200px;}
-
-.article3 .colum:nth-child(1) .colum2:nth-child(1) > div:nth-child(1) {
-    background:url(../img/portfolio-1.jpg) no-repeat center;
-    background-size:cover; opacity:0.3; transition:all 0.3s;
-    animation:down 1s;}
-.article3 .colum:nth-child(1) .colum2:nth-child(1) > div:nth-child(1):hover {opacity: 1;}
-
-.article3 .colum:nth-child(1) .colum2:nth-child(1) > div:nth-child(2) {
-    background:url(../img/portfolio-2.jpg) no-repeat center;
-    background-size:cover; opacity:0.3; transition:all 0.3s;
-    animation:down 2s;}
-.article3 .colum:nth-child(1) .colum2:nth-child(1) > div:nth-child(2):hover {opacity: 1;}
-
-.article3 .colum:nth-child(1) .colum2:nth-child(2) > div:nth-child(1) {
-    background:url(../img/portfolio-3.jpg) no-repeat center;
-    background-size:cover; opacity:0.3; transition:all 0.3s;
-    animation:down 2s;}
-.article3 .colum:nth-child(1) .colum2:nth-child(2) > div:nth-child(1):hover {opacity: 1;}
-
-.article3 .colum:nth-child(1) .colum2:nth-child(2) > div:nth-child(2) {
-    background:url(../img/portfolio-4.jpg) no-repeat center;
-    background-size:cover; opacity:0.3; transition:all 0.3s;
-    animation:down 1s;}
-.article3 .colum:nth-child(1) .colum2:nth-child(2) > div:nth-child(2):hover {opacity: 1;}
-
-.article3 .colum:nth-child(2) {
-    background:url(../img/portfolio-5.jpg) no-repeat center;
-    background-size:cover; opacity:0.3; transition:all 0.3s;
-    animation:longdown 1.5s;}
-.article3 .colum:nth-child(2):hover {opacity: 1;}
-
-.article3 .colum:nth-child(3) .colum2:nth-child(1) > div:nth-child(1) {
-    background:url(../img/portfolio-6.jpg) no-repeat center;
-    background-size:cover; opacity:0.3; transition:all 0.3s;
-    animation:down 1s;}
-.article3 .colum:nth-child(3) .colum2:nth-child(1) > div:nth-child(1):hover {opacity: 1;}
-
-.article3 .colum:nth-child(3) .colum2:nth-child(1) > div:nth-child(2) {
-    background:url(../img/portfolio-7.jpg) no-repeat center;
-    background-size:cover; opacity:0.3; transition:all 0.3s;
-    animation:down 2s;}
-.article3 .colum:nth-child(3) .colum2:nth-child(1) > div:nth-child(2):hover {opacity: 1;}
-
-.article3 .colum:nth-child(3) .colum2:nth-child(2) {
-    background:url(../img/portfolio-8.jpg) no-repeat center;
-    background-size:cover; opacity:0.3; transition:all 0.3s;
-    animation:down 1s;}
-.article3 .colum:nth-child(3) .colum2:nth-child(2):hover {opacity: 1;}
-
-.article3 .imgbox .colum:nth-child(1) > div:nth-child(1) {position:relative;}
-.article3 .imgbox .colum:nth-child(1) > div:nth-child(1) p {
-    position:absolute; top:50%; left:20px; 
-    font-size:300px; color:red}
-.article3 .imgbox .colum:nth-child(3) > div:nth-child(2) {position:relative;}
-.article3 .imgbox .colum:nth-child(3) > div:nth-child(2) p {
-    position:absolute; bottom:60%; right:20px;
-    font-size:300px; color:red}
-
-@keyframes longdown {
-    0% { opacity:0; height: 0px;}
-    100% { opacity:0.3; height:800px;}
+.article2 .rightbox .txt {position: relative;} 
+.article2 .rightbox .txt h3 {
+    font-size:45px; color:#ce8349; z-index:99;
+    position: absolute; top:445px; left:325px;
+    animation:bounce 1s infinite; 
+    font-family: 'Heebo', sans-serif; cursor:pointer;
 }
-@keyframes down {
-    0% { opacity:0; height: 0px;}
-    100% { opacity:0.3; height:200px;}
+.article2 .door { position:relative;
+    font-family: 'Noto Sans KR',sans-serif; font-size:650px;}
+.article2 .door span:first-child {position:absolute;
+    top:50px;left:200px;}
+.article2 .door span:last-child {position:absolute;
+    top:50px;left:400px;}
+.article2 .door.on span:first-child {animation:a 0.3s both;}
+.article2 .door.on span:last-child{animation:b 0.3s both;}
+@keyframes a {
+    0% {left:200px }
+    100% {left:-80px}
 }
-
-/* skill art4구역*/
-.article4 {height:100vh; padding-top:37px; margin-left:37px;
-     border-bottom:1px solid #a9a9a9;}
-.article4 .txt {position: relative; width:100%; height: 200px;} 
-.article4 .txt::before {
-    content: ''; position: absolute;
-    bottom: 0; right: 0; top:0; left: 0;
+@keyframes b {
+    0% {left:350px }
+    100% {left:680px}
 }
-.article4 .txt h3 {
-    font-size:270px; font-weight: bold; letter-spacing:10px;
-    position: absolute; bottom:0px; right:50PX; font-family: 'Imbue', serif; 
-}
-.skills {
-    height:calc(100% - 150px);
+.skills { opacity: 0; transition: all 2s;
+    /* height:calc(100% - 150px); */
     font-size:17px;
-    padding-top:150px;
+    transform:translate(130px, 200px);
 }
-.skills > div {
-    width:100%; position:relative;
-    height:20%; color:#9cdcfe;
-}
-.skills > div > p > span {font-size:25px;
+.skills > div { color:#9cdcfe; margin-bottom:18px;}
+.skills > div > p > span {font-size:22px;
     color:#ce8349; font-weight:bold;
 }
-.skills .score {position:absolute;
-    left:0px; width:100%; font-weight: bold;
-    top:40px; bottom:60px; font-size:20px;
-}
-.skills .score span {color:#d7ba7d;}
-.skills .score em {color:#a9a9a9}
-.skills .score em > em {color:#9cdcfe;}
-.skills .myscore {
-    height:30px; position:relative;}
-.skills .myscore span {
+.skills .score {font-weight: bold;font-size:20px;
+     position: relative; margin-top:8px;}
+.skills .myscore {height:30px; position: relative; }
+.skills .abilit span {color:#d7ba7d;}
+.skills .abilit em {color:#999}
+.skills .abilit em > em {color:#9cdcfe;}
+.skills .abilit {
     position:absolute; left:0; top:50%;
     transform:translateY(-50%);
 }
-.skills .html .myscore {
+.skills.on .html .myscore {
     background:#264f78; width:0%;
     animation:htmlani 1s both 0s;
-    position:relative;
 }
-.skills .css .myscore {
+.skills.on .css .myscore {
     background:#264f78; width:0%;
     animation:cssani 1s both 0.2s;
 }
-.skills .script .myscore {
+.skills.on .script .myscore {
     background:#264f78; width:0%;
     animation:scriptani 1s both 0.4s;
 }
-.skills .jquery .myscore {
+.skills.on .jquery .myscore {
     background:#264f78; width:0%;
     animation:jqueryani 1s both 0.6s;
 }
-.skills .react .myscore {
+.skills.on .react .myscore {
     background:#264f78; width:0%;
     animation:reactani 1s both 0.8s;
 }
+.skills.on .ai .myscore {
+    background:#264f78; width:0%;
+    animation:aiani 1s both 1s;
+}
+.skills.on .psid .myscore {
+    background:#264f78; width:0%;
+    animation:psidani 1s both 1.2s;
+}
 @keyframes htmlani {
-    0% {width:0%; opacity:0;}
+    0% {width:0%; opacity:0; }
     100% {width:90%; opacity:1;}
 }
 @keyframes cssani {
@@ -302,17 +239,25 @@ body {color:#a9a9a9; background-color:#1e1e1e;
 }
 @keyframes scriptani {
     0% {width:0%; opacity:0;}
-    100% {width:70%; opacity:1;}
+    100% {width:60%; opacity:1;}
 }
 @keyframes jqueryani {
     0% {width:0%; opacity:0;}
-    100% {width:60%; opacity:1;}
+    100% {width:70%; opacity:1;}
 }
 @keyframes reactani {
     0% {width:0%; opacity:0;}
-    100% {width:50%; opacity:1;}
+    100% {width:60%; opacity:1;}
 }
-.skills .myscore::before {content: '';
+@keyframes aiani {
+    0% {width:0%; opacity:0;}
+    100% {width:90%; opacity:1;}
+}
+@keyframes psidani {
+    0% {width:0%; opacity:0;}
+    100% {width:80%; opacity:1;}
+}
+.skills.on .myscore::before {content: '';
     position: absolute; z-index: 999999;
     top:0; left: 100%; opacity: 0;
     width: 2px; height: 100%;background: #a9a9a9;
@@ -323,22 +268,82 @@ body {color:#a9a9a9; background-color:#1e1e1e;
     100% {opacity:1;}
 }
 
+
+/* portfolio1 art3구역 */
+.article3 {padding-top:100px; padding-bottom:100px;}
+.article3 h3 {font-size:80px; color: #d7ba7d;
+    font-family: 'Heebo', sans-serif;}
+.article3 > div {margin-bottom:50px; position:relative;}
+.article3 > div:nth-of-type(odd) {text-align:right;}
+.article3 > div .subbox {
+    display:inline-block; vertical-align: middle;
+    width:600px; line-height:1.5;
+    border:1px solid #264f78; color:#fff;
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:18px; overflow: hidden;
+    opacity: 0; transition: all 0.5s;
+}
+.article3 > div .subbox.on {opacity: 1;;}
+.article3 > div:nth-of-type(odd) .subbox {
+    text-align:left; margin-right:30px;
+    box-shadow:-30px 30px 30px rgba(0,0,0,0.6);
+}
+.article3 > div:nth-of-type(2n) .subbox {
+    position:absolute; left:400px; top:50%;
+    transform:translateY(-50%);
+    box-shadow:30px 30px 30px rgba(0,0,0,0.6);
+}
+.article3 .subbox > p {background:#264f78; 
+    text-align: center; font-size:25px;}
+.article3 > div .txt {padding:20px; position: relative;} 
+.article3 > div .txt > p:nth-of-type(2) {margin-bottom:50px;}
+.article3 > div .txt span {
+    font-weight:bold; color: #569cd6; font-size:23px;
+    font-family: 'IBM Plex Mono', monospace;}
+.article3 > div .txt a {
+    font-weight:bold; color:#ce8349; font-size:40px;
+}
+.article3 > div:nth-of-type(odd) .txt a {
+    position:absolute; right:20px; bottom:5px;     
+}
+.article3 > div:nth-of-type(2n) .txt a {
+    position:absolute; left:20px; bottom:5px;
+}
+.article3 > div:nth-of-type(odd) .txt a > i:first-child {animation:slideInLeft 0.8s infinite;}
+.article3 > div:nth-of-type(odd) .txt a > i:last-child {animation:slideInLeft 0.8s infinite;}
+.article3 > div:nth-of-type(2n) .txt a > i:first-child {animation:slideInRight 0.8s infinite;}
+.article3 > div:nth-of-type(2n) .txt a > i:last-child {animation:slideInRight 0.8s infinite;}
+
+
+/* portfolio2 art4구역*/
+.article4 {padding-top:100px; padding-bottom:100px;
+    height:100vh;}
+.article4 h3 {font-size:80px; color: #d7ba7d;
+    font-family: 'Heebo', sans-serif; margin:130px 0 0px 300px}
+.article4 .porfor {margin:20px 0 0 100px; text-align:center; }
+.article4 .imgbox .porfor li {width:13%; margin-left:-100px;
+    display:inline-block; transform:rotateY(50deg); opacity: 0;
+    box-shadow:-50px 30px 30px rgba(0,0,0,0.6);} 
+.article4 .porfor.on li:nth-child(1) {opacity: 1; animation:zoomIn 1s both ;}
+.article4 .porfor.on li:nth-child(2) {opacity: 1; animation:zoomIn 1.1s both 0.1s;}
+.article4 .porfor.on li:nth-child(3) {opacity: 1; animation:zoomIn 1.2s both 0.2s;}
+.article4 .porfor.on li:nth-child(4) {opacity: 1; animation:zoomIn 1.3s both 0.3s;}
+.article4 .porfor.on li:nth-child(5) {opacity: 1; animation:zoomIn 1.4s both 0.4s;}
+.article4 .porfor.on li:nth-child(6) {opacity: 1; animation:zoomIn 1.5s both 0.5s;}
+.article4 .porfor.on li:nth-child(7) {opacity: 1; animation:zoomIn 1.6s both 0.6s;}
+.article4 .porfor.on li:nth-child(8) {opacity: 1; animation:zoomIn 1.7s both 0.7s;}
+.article4 .porfor.on li:nth-child(9) {opacity: 1; animation:zoomIn 1.8s both 0.8s;}
+
+.article4 .imgbox .porfor li:hover {transform:translateX(-30px);}
+
 /* contact me art5구역*/
-.article5 {padding-top:37px; position:relative;
-    height:100vh; background: #1e1e1e; margin-left:37px;}
-.article5 .txt::before {
-    content: ''; position: absolute;
-    bottom: 0; right: 0; top:0; left: 0;
-}
-.article5 .txt h3 {text-align: right; line-height:0.8;
-    font-size:250px; font-weight: bold; letter-spacing:10px;
-    position: absolute; bottom:-20px; right:50PX;
-    font-family: 'Imbue', serif; opacity:1;
-}
-.article5 .form1 {width:80%; margin:0 auto;
+.article5 {padding-top:150px;
+    height:100vh; background: #1e1e1e;}
+.article5 h3 {font-size:80px; color: #d7ba7d;
+    font-family: 'Heebo', sans-serif;}
+.article5 .form1 {width:80%; margin:80px auto 0;
     font-family: 'IBM Plex Mono', monospace;
-    position:absolute; top:45%; left:50%;
-    transform:translate(-50%,-50%); z-index: 999999;}
+   }
 .article5 .form1 fieldset {position: relative;}
 .article5 .form1 fieldset > div {
     position: relative; 
